@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Number Systems</title>
+  </head>
+  <body>
+    <nav>
+      <h1>Number Systems</h1>
+    </nav>
+    <form action="/" method="post">
+      <select name="select" id="select">
+        <option value="bin-dec" <%= locals.select == "bin-dec" ? "selected": ""%>>Binary to Decimal</option>
+        <option value="bin-hex" <%= locals.select == "bin-hex" ? "selected": ""%>>Binary to Hexadecimal</option>
+        <option value="bin-oct" <%= locals.select == "bin-oct" ? "selected": ""%>>Binary to Octal</option>
+        <option value="dec-bin" <%= locals.select == "dec-bin" ? "selected": ""%>>Decimal to Binary</option>
+        <option value="dec-hex" <%= locals.select == "dec-hex" ? "selected": ""%>>Decimal to Hexadecimal</option>
+        <option value="dec-oct" <%= locals.select == "dec-oct" ? "selected": ""%>>Decimal to Octal</option>
+        <option value="hex-bin" <%= locals.select == "hex-bin" ? "selected": ""%>>Hexadecimal to Binary</option>
+        <option value="hex-dec" <%= locals.select == "hex-dec" ? "selected": ""%>>Hexadecimal to Decimal</option>
+        <option value="oct-bin" <%= locals.select == "oct-bin" ? "selected": ""%>>Octal to Binary</option>
+        <option value="oct-dec" <%= locals.select == "oct-dec" ? "selected": ""%>>Octal to Decimal</option> 
+      </select>
+      <input
+        type="number"
+        name="input"
+        id="input"
+        placeholder="Enter number"
+        required
+        value="<%= locals.from %>"
+      />
+      <button type="submit">Convert</button>
+    </form>
+    <p><%= locals.to %></p>
+  </body>
+</html>
