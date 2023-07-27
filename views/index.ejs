@@ -24,7 +24,8 @@
         <option value="oct-dec" <%= locals.select == "oct-dec" ? "selected": ""%>>Octal to Decimal</option> 
       </select>
       <input
-        type="text"
+        type="text" 
+        pattern="[0-9a-fA-F]+"
         name="input"
         id="input"
         placeholder="Enter number"
